@@ -40,13 +40,15 @@ A resposta retornada pela API é um JSON da forma:
 ```
 
 # API de Previsão do Tempo
-Recomendamos o uso do OpenWeather para saber informações climáticas.
+Recomendamos o uso do [OpenWeather](https://openweathermap.org/) para saber informações climáticas.
 Para requisitar informações sobre o clima de **agora** em uma cidade:
 ```bash
 curl -XGET -s 'https://api.openweathermap.org/data/2.5/weather?q=$CITY_NAME&units=metric&lang=pt_br&appid=$APP_ID'
 ```
-Veja o objeto JSON retornado na [Documentação](https://openweathermap.org/current#current_JSON). Você precisa de uma
-chave `APP_ID` para ter acesso à API. Solicite a um dos examinadores ou crie sua conta no OpenWeather.
+Veja o objeto JSON retornado na [Documentação](https://openweathermap.org/current#current_JSON). 
+
+Você precisa de uma chave `APP_ID` para ter acesso à API. 
+Solicite a um dos examinadores ou crie sua conta no [OpenWeather](https://home.openweathermap.org/users/sign_in).
 
 Para requisitar informações detalhadas sobre o clima nas próximas horas ou nos próximos dias em um local, use a API
 de *one-call* com a **latitude** e **longitude** da cidade em que se deseja conhecer a informação climática:
@@ -63,3 +65,18 @@ As **latitude** e **longitude** podem ser obtidas a partir da cidade com a API *
 ## Kotlin
 
 ## Python
+O projeto em python usa *virtual environments* com o `pipenv`. 
+Para instalar as dependências, execute dentro da pasta **python/**:
+```bash
+$ pipenv install --dev
+```
+
+Para rodar a aplicação:
+```bash
+$ pipenv run app
+```
+
+Para executar testes:
+```bash
+$ pipenv run test
+```
