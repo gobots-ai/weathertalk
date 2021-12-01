@@ -61,8 +61,18 @@ As **latitude** e **longitude** podem ser obtidas a partir da cidade com a API *
 # Templates e Dependências
 
 ## Java
+O projeto em Java usa *Maven*.
+Para instalar as dependências, execute dentro da pasta **java/**:
+```bash
+$ ./mvnw package
+```
 
 ## Kotlin
+O projeto em Kotlin usa *Gradle*.
+Para instalar as dependências, execute dentro da pasta **kotlin/**:
+```bash
+$ ./gradlew build
+```
 
 ## Python
 O projeto em python usa *virtual environments* com o `pipenv`. 
