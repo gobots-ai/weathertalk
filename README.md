@@ -4,6 +4,20 @@ nas pastas do repositório pela linguagem de sua preferência. Nós recomendamos
 explicitamente o uso de IDEs como **IntelliJ**, **PyCharm** ou **VSCode**.
 
 
+O desafio é construir uma API com um único endpoint, que recebe um texto com
+uma requisição para uma conversa sobre o clima e retorna a previsão climática
+para local e horário requisitados. Esta API deve integrar outras duas,
+uma **API de Processamento de Linguagem Natural** (PLN) e outra **API de Previsão do Tempo**.
+
+Ao final, a sua API deve ter o fluxo similar a:
+```bash
+curl -XPOST -s http://localhost:8080/weather -d '{"text":"Como está o clima agora em Santos?"}' | jq .
+{
+  "output":"Agora, em Santos, temos um dia nublado com temperatura de 27.34 ºC"
+}
+```
+
+
 # API de Processamento de Linguagem Natural
 O *parsing* de texto em intenções e entidades pode ser feito com um **POST**:
 ```bash
